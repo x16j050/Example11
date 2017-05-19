@@ -16,5 +16,39 @@ namespace Example11
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int year = int.Parse(tbxYear.Text);
+
+            if (year % 4 != 0)
+                lblResult.Text = "①平成です";
+            else{
+                if (year % 100 == 0)
+                {
+                    if (year % 400 == 0)
+                        lblResult.Text = "②うるう年です";
+                    else
+                        lblResult.Text = "③平年です";
+                }
+                else
+                    lblResult.Text = "④うるう年です";
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
